@@ -150,8 +150,8 @@ $ docker-composer up
 ## Built With
 
 * [gopkg](https://gopkg.in/redis.v4) - The Redis driver is used
-
-
+* [stupidbodo](https://gist.github.com/stupidbodo/601b68bfef3449d1b8d9) - AES encryption code is used
+ 
 
 
 ## Authors
