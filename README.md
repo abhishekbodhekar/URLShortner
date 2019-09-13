@@ -131,6 +131,8 @@ $ docker-composer up
 
     (prints userName and API key)
 
+    **NOTE** - calling this API will override any old key available for the userName.
+
 *  /getVisits/
 
     - Desciption : GET request, This prints the number of visists made to shortURL. The key and userName along with shortURL must be passed. REMEMBER, get the API key from /registerNewKey/
