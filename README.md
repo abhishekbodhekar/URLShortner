@@ -1,18 +1,23 @@
-# Project Title
+# URL Shortner
 
 This is an implementation of URL shortning
 
 # Description
 
 This is a package contains implementation for shortning the URLs.
+
 The golang is used on application layer. Redis is used for database.
+
 A docker-compose is provided as well.
 
 
 It inculdes every data stored in redis completely incrypted with AES ecryption.
+
 Also, It stores the number of visits made to any short link.
+
 An API key is required to get the # visits.
-It provides an API to create a API key. Access to generate API key is currently unrestricted.
+
+It provides an API to generate an API key. Access to generate API key is currently unrestricted.
 
 
 ### Prerequisites
@@ -53,29 +58,54 @@ HOW IT WORKS -
 
 
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 
+### Usage
 
-## Deployment
+at root, run with 
+$ docker-composer up
 
-Add additional notes about how to deploy this on a live system
+1) localhost:5899/ 
+    - This is the homepage
+        Noting is here, just a static page
+
+2) /getShortLink/
+    - Desciprion : GET reuest
+        queryParam : 
+        1) longURL
+
+    example - localhost:5899/getShortLink?longURL=http://google.com
+    (prints short URL)
+
+3) /getRedirectLink/
+    - Desciption : GET request
+        queryPatam :
+        1) shortURL
+
+    example - localhost:5899/getRedirectLink?shortURL=http://mydomain.com/NQ== 
+    (prints long (redirect) URL)
+
+4) /registerNewKey/
+    - Desciption : GET request
+        queryParam : 
+        1) userName
+
+    example - localhost:5899/registerNewKey?userName=ggsdsdf
+    (prints userName and API key)
+
+5) /getVisits/
+    - Desciption : GET request
+        queryParam :
+        1) shortURL
+        2) userName
+        3) key
+    example - http://localhost:5899/getVisits?shortURL=http://mydomain.com/MQ==&userName=gg&key=Z2cyMDE5LTA5LTEzVDA3OjUxOjA1Wg==
+    (prints count)
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [gopkg](https://gopkg.in/redis.v4) - The Redis driver is used
+
 
 
 
@@ -83,10 +113,5 @@ Add additional notes about how to deploy this on a live system
 
 * **Abhishek Bodhekar** - (https://github.com/abhishekbodhekar)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
