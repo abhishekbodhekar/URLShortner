@@ -112,7 +112,13 @@ func onGetRedirectLink(w http.ResponseWriter, r *http.Request) {
 					responseToCLient(w, "Not the correct short link provided by mydomain.com")
 				} else {
 					a := correctURL.Path[1:]
-					str, _ := getLongURL(a)
+					str, ok := getLongURL(a)
+
+					if ok {
+						responseToCLient(w, "Redirect Link is : "+str)
+						return
+					}
+
 					responseToCLient(w, str)
 				}
 			}
@@ -170,7 +176,7 @@ func onGetVisits(w http.ResponseWriter, r *http.Request) {
 				} else {
 					a := correctURL.Path[1:] // **NOTE** This functions requires a correct URL as URLvalue
 					str, _ := getCounter(a)
-					responseToCLient(w, str)
+					responseToCLient(w, "Total Visits : "+str)
 				}
 			}
 		} else {
