@@ -29,6 +29,12 @@ Otherwise, only redis server is needed to be installed on host as compiled Go pa
 
 HOW IT WORKS - 
 
+
+# Get a long (Redirect) URL -> store in redis with some id -> encode the id -> get a short URL  
+
+# Get a short URL -> decode to get the id -> in redis, get the value at id which is long URL
+
+# Brief - 
  * Storing the longURL for the first time and fetching the ShortURL
 1) The lastIndex is stored at redis. It is basically the identification index of the last inserted URL.
 2) When a new URL request comes, The lastIndex if fetched. It is then incremented with 1.
