@@ -143,7 +143,7 @@ $ docker-composer up
 
         3) "key"
 
-    example - http://localhost:5899/getVisits?shortURL=http://mydomain.com/MQ==&userName=gg&key=Z2cyMDE5LTA5LTEzVDA3OjUxOjA1Wg==
+    example - localhost:5899/getVisits?shortURL=http://mydomain.com/MQ==&userName=gg&key=Z2cyMDE5LTA5LTEzVDA3OjUxOjA1Wg==
 
     (prints count)
 
