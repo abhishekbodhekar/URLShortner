@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+  app:
+    image: golang:1.6.1-alpine
+    volumes:
+      - .:/go/src/go-with-compose
+    working_dir: /go/src/go-with-compose
+    ports:
+      - "5899:5899"
+    command: go run Server.go model.go Shortner.go Encoder.go APIKeyHandler.go AesEncryption.go
+    links:
+      - redis
+    environment:
+      REDIS_URL: redis:6379
+      APP_URL: :5899
+
+  redis:
+    image: redis:alpine
