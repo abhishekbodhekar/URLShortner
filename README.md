@@ -71,11 +71,11 @@ $ docker-composer up
 
 2) /getShortLink/
 
-    - Desciprion : GET reuest
+    - Desciprion : GET reuest, This prints short URL for provided long URL.
 
         queryParam : 
 
-        1) longURL
+        1) "longURL"
 
     example - localhost:5899/getShortLink?longURL=http://google.com
 
@@ -83,11 +83,11 @@ $ docker-composer up
 
 3) /getRedirectLink/
 
-    - Desciption : GET request
+    - Desciption : GET request, This prints Redirect (long) URL for provided short URL
 
         queryPatam :
 
-        1) shortURL
+        1) "shortURL"
 
     example - localhost:5899/getRedirectLink?shortURL=http://mydomain.com/NQ== 
 
@@ -95,11 +95,11 @@ $ docker-composer up
 
 4) /registerNewKey/
 
-    - Desciption : GET request
+    - Desciption : GET request, This prints the API key for the userName provided. REMEMBER, this key is valid for only 10 minutes. You can create new key for the same userName anytime.
 
         queryParam : 
 
-        1) userName
+        1) "userName"
 
     example - localhost:5899/registerNewKey?userName=ggsdsdf
 
@@ -107,18 +107,18 @@ $ docker-composer up
 
 5) /getVisits/
 
-    - Desciption : GET request
+    - Desciption : GET request, This prints the number of visists made to shortURL. The key and userName along with shortURL must be passed. REMEMBER, get the API key from /registerNewKey/
 
         queryParam :
 
-        1) shortURL
+        1) "shortURL"
 
-        2) userName
+        2) "userName"
 
-        3) key
+        3) "key"
 
     example - http://localhost:5899/getVisits?shortURL=http://mydomain.com/MQ==&userName=gg&key=Z2cyMDE5LTA5LTEzVDA3OjUxOjA1Wg==
-    
+
     (prints count)
 
 ## Built With
