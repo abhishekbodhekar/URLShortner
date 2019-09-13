@@ -91,11 +91,11 @@ HOW IT WORKS -
 at root, run with 
 $ docker-composer up
 
-* 1) localhost:5899/ 
+*  localhost:5899/ 
     - This is the homepage
         Noting is here, just a static page
 
-* 2) /getShortLink/
+*  /getShortLink/
 
     - Desciprion : GET reuest, This prints short URL for provided long URL.
 
@@ -107,7 +107,7 @@ $ docker-composer up
 
     (prints short URL)
 
-* 3) /getRedirectLink/
+*  /getRedirectLink/
 
     - Desciption : GET request, This prints Redirect (long) URL for provided short URL
 
@@ -119,7 +119,7 @@ $ docker-composer up
 
     (prints long (redirect) URL)
 
-* 4) /registerNewKey/
+*  /registerNewKey/
 
     - Desciption : GET request, This prints the API key for the userName provided. REMEMBER, this key is valid for only 10 minutes. You can create new key for the same userName anytime.
 
@@ -131,7 +131,7 @@ $ docker-composer up
 
     (prints userName and API key)
 
-* 5) /getVisits/
+*  /getVisits/
 
     - Desciption : GET request, This prints the number of visists made to shortURL. The key and userName along with shortURL must be passed. REMEMBER, get the API key from /registerNewKey/
 
