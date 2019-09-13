@@ -56,9 +56,29 @@ HOW IT WORKS -
 2) The key is formed ("key"+index) to get the value (hash)
 3) This value is decrypted to get the value of longURL
 
+### Contents
 
+1) vendor - For external dependancy for redis driver
 
+2) docker-compose.yml
 
+3) aesEncrption.go - This file intents to include all encryption and decryption methods. A symetric AESalgorithm is used.The Key is also provided statically inthe file.
+
+4) apiKeyHandler.go - This file intents to include all API key creations and validation methods. Keys are stored in redis.
+
+5) encoder.go - This file consists encoding and decoding to base64 methods.
+
+6) model.go - This file contents models to map with redis for accessing urls and keys
+
+7) REAMME.md - this is a readme file.
+
+8) server.go - This file handles server handling operations. It consists of methods which starts application server and redis server as well. All the web routing and responses are handled in this file.
+
+9) shortner.go - This file consits of the logic which drives this application. Fetching, storing to redis, operating on data and their values can be seen here.
+
+10) Encryption_test.go - The test file. It tests the decryption algorithm.
+
+11) URLShortner (executable) - This is the executable for aplication.
 
 ### Usage
 
