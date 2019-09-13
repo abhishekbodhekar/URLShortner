@@ -70,36 +70,55 @@ $ docker-composer up
         Noting is here, just a static page
 
 2) /getShortLink/
+
     - Desciprion : GET reuest
+
         queryParam : 
+
         1) longURL
 
     example - localhost:5899/getShortLink?longURL=http://google.com
+
     (prints short URL)
 
 3) /getRedirectLink/
+
     - Desciption : GET request
+
         queryPatam :
+
         1) shortURL
 
     example - localhost:5899/getRedirectLink?shortURL=http://mydomain.com/NQ== 
+
     (prints long (redirect) URL)
 
 4) /registerNewKey/
+
     - Desciption : GET request
+
         queryParam : 
+
         1) userName
 
     example - localhost:5899/registerNewKey?userName=ggsdsdf
+
     (prints userName and API key)
 
 5) /getVisits/
+
     - Desciption : GET request
+
         queryParam :
+
         1) shortURL
+
         2) userName
+
         3) key
+
     example - http://localhost:5899/getVisits?shortURL=http://mydomain.com/MQ==&userName=gg&key=Z2cyMDE5LTA5LTEzVDA3OjUxOjA1Wg==
+    
     (prints count)
 
 ## Built With
