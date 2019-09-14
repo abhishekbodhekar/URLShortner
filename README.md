@@ -8,10 +8,10 @@ This is a package contains implementation for shortning the URLs.
 
 The golang is used on application layer. Redis is used for database.
 
-A docker-compose is provided as well.
+A "docker-compose" is provided as well.
 
 
-It inculdes every data stored in redis completely incrypted with AES ecryption.
+It inculdes every data stored in redis completely "incrypted" with AES ecryption.
 
 Also, It stores the number of visits made to any short link.
 
@@ -30,9 +30,9 @@ Otherwise, only redis server is needed to be installed on host as compiled Go pa
 HOW IT WORKS - 
 
 
-### Get a long (Redirect) URL -> store in redis with some id -> encode the id -> get a short URL  
+### Get a long (Redirect) URL -> store in redis with some id -> encode the id with base64 -> get a short URL  
 
-### Get a short URL -> decode to get the id -> in redis, get the value at id which is long URL
+### Get a short URL -> decode to get the id with base64 -> in redis, get the value at id which is long URL
 
 # Brief - 
  * Storing the longURL for the first time and fetching the ShortURL
