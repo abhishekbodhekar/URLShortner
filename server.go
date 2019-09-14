@@ -40,7 +40,6 @@ func initializeRedis() {
 
 // Homepage "/" hadler
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	//responseToCLient(w, "Nothing is here... \n\nUse following apis\n\n/getShortLink\n/getRedirectLink\n/getVisits\n/registerNewKey")
 	responseToCLient(w, ` Hello, Please get the description here : 
 	1) /getShortLink :- 
 		QueryParams : 
@@ -50,9 +49,6 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 
 	
 	2) /getRedirectLink
-
-
-	
 		QueryParams : 
 			(a) "ShortURL"
 			
