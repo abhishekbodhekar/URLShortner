@@ -40,7 +40,43 @@ func initializeRedis() {
 
 // Homepage "/" hadler
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	responseToCLient(w, "Nothing is here... \n\nUse following apis\n\n/getShortLink\n/getRedirectLink\n/getVisits\n/registerNewKey")
+	//responseToCLient(w, "Nothing is here... \n\nUse following apis\n\n/getShortLink\n/getRedirectLink\n/getVisits\n/registerNewKey")
+	responseToCLient(w, ` Hello, Please get the description here : 
+	1) /getShortLink :- 
+		QueryParams : 
+			(a) "longURL"
+
+			example =  localhost:5899/getShortLink?longURL=http://google.com
+
+	
+	2) /getRedirectLink
+
+
+	
+		QueryParams : 
+			(a) "ShortURL"
+			
+			example = localhost:5899/getRedirectLink?shortURL=http://mydomain.com/NQ==
+
+	
+	3) /registerNewKey
+		QueryParams : 
+			(a) "userName"
+
+			example = localhost:5899/registerNewKey?userName=abhishek
+
+		
+	4) /getVisits
+		UqeryParams : 
+			(a) "shortURL"
+			(b) "userName"
+			(c) "key"
+
+			example = localhost:5899/getVisits?shortURL=http://mydomain.com/MQ==&userName=gg&key=Z2cyMDE5LTA5LTEzVDA3OjUxOjA1Wg==
+
+	
+	`)
+
 }
 
 // GET request handler on "/GetShortLink"
